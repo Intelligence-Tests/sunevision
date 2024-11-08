@@ -31,7 +31,9 @@ const Benefits = () => {
                     width={48}
                     height={48}
                     alt={item.title}
+                    className="rounded-lg"  // Adds a border radius
                   />
+
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Explore more
                   </p>

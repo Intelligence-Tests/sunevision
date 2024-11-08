@@ -1,6 +1,7 @@
 import Heading from "./Heading";
 import Section from "./Section";
 import ReactCompareImage from 'react-compare-image';
+import { service1, service2, service3, check } from "../assets";
 
 const Image = () => (
     <Section className="overflow-hidden">
@@ -10,9 +11,9 @@ const Image = () => (
             <div className="w-[900px] h-[300px] mt-[10vh] mb-[5vh] mx-auto flex items-center justify-center">
 
                 {/* React Compare Image Component */}
-                <ReactCompareImage 
-                    leftImage="src/assets/services/service-1.jpg" 
-                    rightImage="src/assets/services/service-2.jpg" 
+                <ReactCompareImage
+                    leftImage={service1}
+                    rightImage={service2}
                 />
             </div>
 

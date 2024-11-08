@@ -6,6 +6,7 @@ import { LeftCurve, RightCurve } from "./design/Collaboration";
 import { socials } from "../constants";
 import React, { useEffect, useState } from "react";
 import ClipPath from "../assets/svg/ClipPath";
+import image2 from "../assets/benefits/image-2.jpg";
 
 const Collaboration = () => {
   const [experience, setExperience] = useState(1); // Initial value for spinning effect
@@ -20,7 +21,7 @@ const Collaboration = () => {
     const stopTimeout = setTimeout(() => {
       clearInterval(spinInterval);
       setExperience(5); // Final value
-    }, 2000);
+    }, 2500);
 
     return () => {
       clearInterval(spinInterval);
@@ -91,8 +92,8 @@ const Collaboration = () => {
 
             {/* Image and Text */}
             <div className="flex-1 p-6 flex flex-col justify-center items-center text-center">
-              <img
-                src="src/assets/benefits/image-2.jpg" // Replace with the imported photo path
+            <img
+                src={image2}
                 alt="Interior Design Sample"
                 className="w-full object-cover rounded-md"
               />
