@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
@@ -15,9 +16,9 @@
     "react": "^18.3.1",
     "react-compare-image": "^3.4.0",
     "react-dom": "^18.3.1",
-    "react-image-comparison-slider": "^1.8.4",
     "react-just-parallax": "^3.1.16",
     "react-router-dom": "^6.27.0",
+    "react-scripts": "^5.0.1",
     "scroll-lock": "^2.1.5"
   },
   "devDependencies": {
