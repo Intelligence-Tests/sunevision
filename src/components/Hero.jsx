@@ -22,7 +22,7 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6 text-3xl sm:text-2xl lg:text-6xl">
+          <h1 className="h1 mb-6 text-xl sm:text-lg lg:text-4xl">
             Creating your dreams through&nbsp;Innovative&nbsp;Design {` `}
             <span className="inline-block relative">
               Sun E-Vision Arch{" "}
