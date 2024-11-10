@@ -7,11 +7,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --font-sora: "Sora", sans-serif;
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: dark;
+} */
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+
+  /* Theme Colors */
+  --bg-color: #ffffff; /* Light theme background */
+  --text-color: #000000; /* Light theme text */
+  --accent-color: #0070f3; /* Light theme accent */
+  color-scheme: light;
+}
+
+.dark {
+  /* Dark Theme Variables */
+  --bg-color: #1a1a2e; /* Dark theme background */
+  --text-color: #ffffff; /* Dark theme text */
+  --accent-color: #ff4081; /* Dark theme accent */
+  color-scheme: dark;
+}
+body {
+  font-family: var(--font-sora);
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 * {
@@ -86,4 +110,10 @@
 
 .-rotate-360 {
   @apply rotate-[-360deg]
+}
+
+/* Additional Styles for Font and Colors */
+body, button, input, textarea {
+  font-family: var(--font-sora);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
