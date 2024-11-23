@@ -12,6 +12,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@mui/icons-material": "^6.1.6",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.460.0",
     "react": "^18.3.1",
     "react-compare-image": "^3.4.0",
     "react-dark-mode-toggle": "^0.2.0",

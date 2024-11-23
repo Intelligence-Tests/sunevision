@@ -21,7 +21,7 @@ const Hero = () => {
       id="home"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] animate-slide-text">
           <h1 className="h1 mb-6 text-3xl sm:text-2xl lg:text-6xl">
             Creating your dreams with&nbsp;Innovative&nbsp;Design {` `}
             <span className="inline-block relative">
@@ -38,7 +38,7 @@ const Hero = () => {
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             We blend innovation with visual appeal to deliver outstanding architectural designs.
           </p>
-          <Button href="/services" white>
+          <Button href="#services" white>
             Get started
           </Button>
         </div>

@@ -1,13 +1,14 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import DarkModeToggle from "react-dark-mode-toggle"; // Import the toggle component
+
 import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
+import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 
-const Header = ({ isDarkMode, setIsDarkMode }) => {
+const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
 
@@ -23,19 +24,20 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
   const handleClick = () => {
     if (!openNavigation) return;
+
     enablePageScroll();
     setOpenNavigation(false);
   };
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#home">
-          <img src={brainwave} width={190} height={40} alt="brainwave" />
+        <img src={brainwave} width={190} height={40} alt="brainwave"/>
         </a>
 
         <nav
@@ -52,26 +54,29 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
+                  item.url === pathname.hash
+                    ? "z-2 lg:text-n-1"
+                    : "lg:text-n-1/50"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-                style={{ fontSize: "1.0rem" }}
+                style={{ fontSize: '1.0rem' }}
               >
                 {item.title}
               </a>
             ))}
           </div>
+
+          <HamburgerMenu />
         </nav>
 
-        {/* Dark Mode Toggle */}
-        <DarkModeToggle
-          onChange={setIsDarkMode}
-          checked={isDarkMode}
-          size={60} // Adjust size as needed
-        />
-
-        <Button className="hidden lg:flex" href="#login">
+        {/* <a
+          href="#signup"
+          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+        >
+          New account
+        </a> */}
+        {/* <Button className="hidden lg:flex" href="#login">
           Admin
-        </Button>
+        </Button> */}
 
         <Button
           className="ml-auto lg:hidden"
@@ -87,17 +92,17 @@ const Header = ({ isDarkMode, setIsDarkMode }) => {
 
 export default Header;
 
+
 // import { useLocation } from "react-router-dom";
 // import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
+// import DarkModeToggle from "react-dark-mode-toggle"; // Import the toggle component
 // import { brainwave } from "../assets";
 // import { navigation } from "../constants";
 // import Button from "./Button";
 // import MenuSvg from "../assets/svg/MenuSvg";
-// import { HamburgerMenu } from "./design/Header";
 // import { useState } from "react";
 
-// const Header = () => {
+// const Header = ({ isDarkMode, setIsDarkMode }) => {
 //   const pathname = useLocation();
 //   const [openNavigation, setOpenNavigation] = useState(false);
 
@@ -113,20 +118,19 @@ export default Header;
 
 //   const handleClick = () => {
 //     if (!openNavigation) return;
-
 //     enablePageScroll();
 //     setOpenNavigation(false);
 //   };
 
 //   return (
 //     <div
-//       className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+//       className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
 //         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
 //       }`}
 //     >
 //       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
 //         <a className="block w-[12rem] xl:mr-8" href="#home">
-//         <img src={brainwave} width={190} height={40} alt="brainwave"/>
+//           <img src={brainwave} width={190} height={40} alt="brainwave" />
 //         </a>
 
 //         <nav
@@ -143,26 +147,23 @@ export default Header;
 //                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
 //                   item.onlyMobile ? "lg:hidden" : ""
 //                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-//                   item.url === pathname.hash
-//                     ? "z-2 lg:text-n-1"
-//                     : "lg:text-n-1/50"
+//                   item.url === pathname.hash ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
 //                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-//                 style={{ fontSize: '1.0rem' }}
+//                 style={{ fontSize: "1.0rem" }}
 //               >
 //                 {item.title}
 //               </a>
 //             ))}
 //           </div>
-
-//           <HamburgerMenu />
 //         </nav>
 
-//         {/* <a
-//           href="#signup"
-//           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-//         >
-//           New account
-//         </a> */}
+//         {/* Dark Mode Toggle */}
+//         <DarkModeToggle
+//           onChange={setIsDarkMode}
+//           checked={isDarkMode}
+//           size={60} // Adjust size as needed
+//         />
+
 //         <Button className="hidden lg:flex" href="#login">
 //           Admin
 //         </Button>

@@ -52,6 +52,7 @@ export const navigation = [
     title: "OurTeam",
     url: "#team",
   },
+  
   {
     id: "3",
     title: "Blog",
@@ -59,14 +60,19 @@ export const navigation = [
   },
   {
     id: "4",
-    title: "",
-    url: "#",
-    onlyMobile: true,
+    title: "Contact Us",
+    url: "#contactus",
   },
   {
     id: "5",
-    title: "Admin",
-    url: "#login",
+    title: "",
+    url: "",
+    onlyMobile: true,
+  },
+  {
+    id: "6",
+    title: "",
+    url: "",
     onlyMobile: true,
   },
 ];
@@ -241,7 +247,7 @@ export const pricing = [
   },
 ];
 
-export const benefits = [
+export const items = [
   {
     id: "0",
     title: "Home Interior Design",
@@ -249,6 +255,7 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    route: "/exploremore"
   },
   {
     id: "1",
@@ -258,6 +265,7 @@ export const benefits = [
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     light: true,
+    route:"/exploremoreexterior"
   },
   {
     id: "2",
