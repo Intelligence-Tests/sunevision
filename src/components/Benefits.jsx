@@ -40,13 +40,13 @@ const Benefits = ({ route }) => {
                     alt={item.title}
                     className="rounded-lg"
                   />
-                  <a
-                    href={item.route}
+                  <Link
+                    to={item.route}
                     onClick={handleClick}
                     className="ml-auto font-mono text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-2 rounded-lg shadow-lg hover:from-purple-600 hover:to-indigo-500 hover:scale-105 transition duration-300 ease-in-out"
                   >
                     Explore more
-                  </a>
+                  </Link>
 
                 </div>
               </div>
