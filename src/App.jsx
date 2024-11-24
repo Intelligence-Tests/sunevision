@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
@@ -11,13 +11,15 @@ import Progress from "./components/Progress";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import WorkingProcess from "./components/WorkingProcess";
-import ExploreOne from "./components/Explore1";
+import ExploreOne from "./components/Explore1"; // Import the ExploreOne component
 import ExploreTwo from "./components/Explore2";
+import ScrollToTop from "./components/ScrollToTop";
 
 const MainPage = () => (
   <>
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Header />
+      <ScrollToTop/>
       <Hero />
       <Benefits />
       <Collaboration />
@@ -33,17 +35,13 @@ const MainPage = () => (
   </>
 );
 
-const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/exploremore" element={<ExploreOne />} />
-      <Route path="/exploremoreexterior" element={<ExploreTwo />} />
-      {/* Add a catch-all route for 404 handling */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
-};
+const App = () => (
+  <Routes>
+    <Route path="/" element={<MainPage />} /> {/* Main page route */}
+    <Route path="/exploremore" element={<ExploreOne />} /> {/* Explore page route */}
+    <Route path="/exploremoreexterior" element={<ExploreTwo />} />
+  </Routes>
+);
 
 export default App;
 

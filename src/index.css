@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -112,4 +114,31 @@
 
 .-rotate-360 {
   @apply rotate-[-360deg]
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #d3af39; /* Yellowish color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  background-color: #c4a22a; /* Slightly darker yellow for hover */
+}
+
+.arrow-icon {
+  font-size: 24px; /* Adjust size of the arrow */
+  color: white;
+  font-weight: bold;
 }

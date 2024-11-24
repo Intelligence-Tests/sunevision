@@ -9,10 +9,25 @@ import ClipPath from "../assets/svg/ClipPath";
 import sampleSize from "lodash/sampleSize";
 import Footer from "./Footer";
 import { brainwave } from "../assets";
+import Slider from "react-slick";
+import imgSrc1 from "../assets/roadmap/image-1.jpg";
+import imgSrc2 from "../assets/roadmap/image-2.jpg";
+import imgSrc3 from "../assets/roadmap/image-3.jpg";
+import imgSrc4 from "../assets/roadmap/image-4.jpg";
+import ScrollToTop from "./ScrollToTop";
 
 const ExploreOne = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
+  };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   const [formData, setFormData] = useState({
     name: "",
@@ -37,9 +52,16 @@ const ExploreOne = () => {
     { id: 3, name: "The Style Studio", description: "Modern design solutions for contemporary homes" },
     { id: 4, name: "The Design Collective", description: "Collaborative design approach for unique spaces" }
   ];
+  const images = [
+    imgSrc1,
+    imgSrc2,
+    imgSrc3,
+    imgSrc4,
+  ];
 
   return (
     <Section className="overflow-hidden" id="exploremore">
+      <ScrollToTop/>
       <div className="min-h-screen w-[90%] mx-auto">
         {/* Hero Section with Background Image */}
         <div className="relative h-64 bg-gray-900">
@@ -68,14 +90,17 @@ const ExploreOne = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Featured Project Image */}
             <div className="md:col-span-2">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src={service1}
-                  alt="Modern house design"
-                  className="w-full h-[434px] object-cover"
-
-                />
-              </div>
+              <Slider {...settings}>
+                {images.map((image, index) => (
+                  <div key={index} className="rounded-lg overflow-hidden shadow-lg">
+                    <img
+                      src={image}
+                      alt={`Slide ${index + 1}`}
+                      className="w-full h-[434px] object-cover"
+                    />
+                  </div>
+                ))}
+              </Slider>
 
             </div>
 
@@ -137,12 +162,12 @@ const ExploreOne = () => {
         <h2 className="text-3xl font-bold mb-6">Our Work Process</h2>
         <ul className="space-y-4">
           {[
-     "Initial Consultation: We begin with a detailed discussion to understand your preferences, lifestyle, and vision for your home.",
-     "Personalized Design Concepts: Based on your input, we create custom design concepts that combine modern style with timeless elegance.",
-     "Design Refinement: We work with you to refine the designs, ensuring they align with your vision and functionality needs.",
-     "Material Selection: Our team assists in choosing the perfect materials, finishes, and furnishings to complement your design.",
-     "Execution & Project Management: We oversee every detail, managing the project from start to finish, ensuring the highest quality work and adherence to timelines.",
-     "Final Reveal: We complete the transformation with a final walkthrough to ensure everything is to your satisfaction, ready for you to enjoy."
+            "Initial Consultation: We begin with a detailed discussion to understand your preferences, lifestyle, and vision for your home.",
+            "Personalized Design Concepts: Based on your input, we create custom design concepts that combine modern style with timeless elegance.",
+            "Design Refinement: We work with you to refine the designs, ensuring they align with your vision and functionality needs.",
+            "Material Selection: Our team assists in choosing the perfect materials, finishes, and furnishings to complement your design.",
+            "Execution & Project Management: We oversee every detail, managing the project from start to finish, ensuring the highest quality work and adherence to timelines.",
+            "Final Reveal: We complete the transformation with a final walkthrough to ensure everything is to your satisfaction, ready for you to enjoy."
           ].map((text, index) => (
             <li key={index} className="flex items-center space-x-3">
               <span className="text-yellow-500">

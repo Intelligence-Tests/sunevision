@@ -1,14 +1,15 @@
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
 
-function ScrollToTop() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
+const ScrollToTop = () => {
+  const handleClick = () => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  };
 
-  return null;
-}
+  return (
+    <div className="scroll-to-top" onClick={handleClick}>
+      <span className="arrow-icon">↑</span>
+    </div>
+  );
+};
 
 export default ScrollToTop;
