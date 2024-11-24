@@ -35,6 +35,9 @@ import {
   twitter,
   yourlogo,
 } from "../assets";
+import card1 from '../assets/benefits/card-1.svg';
+
+
 
 export const navigation = [
   {
@@ -252,7 +255,7 @@ export const items = [
     id: "0",
     title: "Home Interior Design",
     text: "Transform your home's curb appeal with stylish, modern, and timeless exterior designs.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    backgroundUrl: card1,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     route: "/exploremore"
