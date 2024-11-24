@@ -25,7 +25,6 @@ const Benefits = ({ route }) => {
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
                 zIndex: 1,
-
               }}
               key={item.id}
             >
