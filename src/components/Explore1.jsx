@@ -8,6 +8,8 @@ import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import sampleSize from "lodash/sampleSize";
 import Footer from "./Footer";
+import { brainwave } from "../assets";
+
 const ExploreOne = () => {
   const handleClick = () => {
     window.scrollTo(0, 0);
@@ -123,8 +125,11 @@ const ExploreOne = () => {
       {/* Section 1: Our Approach */}
       <div className="max-w-5xl ml-[100px] mb-20">
         <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
-        
+        <p className="text-lg leading-relaxed">
+          We believe in transforming your home into a sanctuary that reflects your unique style. Our designs combine modern aesthetics with timeless elegance, ensuring that every room is a perfect blend of functionality and beauty. From enhancing curb appeal with stylish exteriors to creating inviting and cozy interiors, we deliver exceptional designs that stand the test of time. Let us bring your vision to life and elevate your home to new heights.
+        </p>
       </div>
+
 
 
       {/* Section 1: Our Work Process */}
@@ -132,8 +137,12 @@ const ExploreOne = () => {
         <h2 className="text-3xl font-bold mb-6">Our Work Process</h2>
         <ul className="space-y-4">
           {[
-            
-            
+     "Initial Consultation: We begin with a detailed discussion to understand your preferences, lifestyle, and vision for your home.",
+     "Personalized Design Concepts: Based on your input, we create custom design concepts that combine modern style with timeless elegance.",
+     "Design Refinement: We work with you to refine the designs, ensuring they align with your vision and functionality needs.",
+     "Material Selection: Our team assists in choosing the perfect materials, finishes, and furnishings to complement your design.",
+     "Execution & Project Management: We oversee every detail, managing the project from start to finish, ensuring the highest quality work and adherence to timelines.",
+     "Final Reveal: We complete the transformation with a final walkthrough to ensure everything is to your satisfaction, ready for you to enjoy."
           ].map((text, index) => (
             <li key={index} className="flex items-center space-x-3">
               <span className="text-yellow-500">
@@ -170,13 +179,13 @@ const ExploreOne = () => {
                     alt={item.title}
                     className="rounded-lg"
                   />
-                  <a
-                    href={item.route}
+                  <Link
+                    to={item.route}
                     onClick={handleClick}
                     className="ml-auto font-mono text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-2 rounded-lg shadow-lg hover:from-purple-600 hover:to-indigo-500 hover:scale-105 transition duration-300 ease-in-out"
                   >
                     Explore more
-                  </a>
+                  </Link>
                 </div>
               </div>
               {item.light && <GradientLight />}
@@ -205,84 +214,84 @@ const ExploreOne = () => {
 
       {/*Contact form */}
       <div className="max-w-2xl mx-auto p-6  rounded-lg shadow-lg">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-2">
-          Have project in mind? Let's discuss
-        </h2>
-        <p className="text-gray-400">
-          Get in touch with us to see how we can help you with your project
-        </p>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">
+            Have project in mind? Let's discuss
+          </h2>
+          <p className="text-gray-400">
+            Get in touch with us to see how we can help you with your project
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block font-medium mb-2">
+              Your Name
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
+                required
+              />
+            </label>
+          </div>
+
+          <div>
+            <label className="block font-medium mb-2">
+              Your Email
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
+                required
+              />
+            </label>
+          </div>
+
+          <div>
+            <label className="block text-gray-100 font-medium mb-2">
+              Category
+              <select
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
+              >
+                <option value="Furniture">Furniture</option>
+                <option value="Interior Design">Interior Design</option>
+                <option value="Architecture">Architecture</option>
+              </select>
+            </label>
+          </div>
+
+          <div>
+            <label className="block font-medium mb-2">
+              Message
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition min-h-[120px] resize-y"
+                required
+              />
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-indigo-500 text-gray-900 font-semibold py-3 px-6 rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 transition-colors duration-200"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
-
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <label className="block font-medium mb-2">
-            Your Name
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
-              required
-            />
-          </label>
-        </div>
-
-        <div>
-          <label className="block font-medium mb-2">
-            Your Email
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
-              required
-            />
-          </label>
-        </div>
-
-        <div>
-          <label className="block text-gray-100 font-medium mb-2">
-            Category
-            <select
-              name="category"
-              value={formData.category}
-              onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition"
-            >
-              <option value="Furniture">Furniture</option>
-              <option value="Interior Design">Interior Design</option>
-              <option value="Architecture">Architecture</option>
-            </select>
-          </label>
-        </div>
-
-        <div>
-          <label className="block font-medium mb-2">
-            Message
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent transition min-h-[120px] resize-y"
-              required
-            />
-          </label>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-indigo-500 text-gray-900 font-semibold py-3 px-6 rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 transition-colors duration-200"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-    <Footer />
+      <Footer />
     </Section>
- 
+
   );
 };
 

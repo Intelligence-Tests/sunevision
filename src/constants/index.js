@@ -36,6 +36,11 @@ import {
   yourlogo,
 } from "../assets";
 import card1 from '../assets/benefits/card-1.png';
+import card2 from '../assets/benefits/card-2.png';
+import card3 from '../assets/benefits/card-3.png';
+import card4 from '../assets/benefits/card-4.png';
+import card5 from '../assets/benefits/card-5.png';
+import card6 from '../assets/benefits/card-6.png';
 
 export const navigation = [
   {
@@ -262,7 +267,7 @@ export const items = [
     id: "1",
     title: "Home Exterior Design",
     text: "Elevate your home’s look with stunning exterior designs that blend style and function.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    backgroundUrl: card2,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     light: true,
@@ -272,7 +277,7 @@ export const items = [
     id: "2",
     title: "2D/3D Design Layout",
     text: "Craft detailed 2D and 3D layouts for spaces that inspire and impress.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    backgroundUrl: card3,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
@@ -280,7 +285,7 @@ export const items = [
     id: "3",
     title: "Residential Design",
     text: "Create beautiful residential designs that reflect comfort, style, and functionality.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
+    backgroundUrl:card4,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     light: true,
@@ -289,7 +294,7 @@ export const items = [
     id: "4",
     title: "Modular Kitchen Design",
     text: "Design your dream modular kitchen with efficiency, style, and innovative storage solutions.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    backgroundUrl: card5,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
@@ -297,7 +302,7 @@ export const items = [
     id: "5",
     title: "Custom Design plan",
     text: "Develop a tailored custom design plan that meets your unique needs and preferences.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
+    backgroundUrl: card6,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
