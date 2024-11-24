@@ -35,9 +35,7 @@ import {
   twitter,
   yourlogo,
 } from "../assets";
-import card1 from '../assets/benefits/card-1.svg';
-
-
+import card1 from '../assets/benefits/card-1.png';
 
 export const navigation = [
   {
