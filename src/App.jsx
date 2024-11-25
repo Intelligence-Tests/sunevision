@@ -11,7 +11,7 @@ import Progress from "./components/Progress";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import WorkingProcess from "./components/WorkingProcess";
-import ExploreOne from "./components/Explore1"; // Import the ExploreOne component
+import ExploreOne from "./components/Explore1";
 import ExploreTwo from "./components/Explore2";
 import ScrollToTop from "./components/ScrollToTop";
 

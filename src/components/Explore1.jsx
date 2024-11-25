@@ -15,8 +15,46 @@ import imgSrc2 from "../assets/roadmap/image-2.jpg";
 import imgSrc3 from "../assets/roadmap/image-3.jpg";
 import imgSrc4 from "../assets/roadmap/image-4.jpg";
 import ScrollToTop from "./ScrollToTop";
+import Swal from 'sweetalert2'
 
 const ExploreOne = () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "261c296e-a139-470e-b16e-39511476da4d");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Success",
+        text: "Message sent succesfully",
+        icon: "success"
+      });
+    }
+  };
   const handleClick = () => {
     window.scrollTo(0, 0);
   };
@@ -181,7 +219,7 @@ const ExploreOne = () => {
       </div>
 
       {/* Section 2: Related Service */}
-      <div className="max-w-6xl mx-auto mt-16">
+      <div className="max-w-6xl mx-auto mt-16 container relative z-2">
         <h2 className="text-3xl font-bold mb-8">Related Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {sampleSize(items, 3).map((item) => (
@@ -238,7 +276,7 @@ const ExploreOne = () => {
 
 
       {/*Contact form */}
-      <div className="max-w-2xl mx-auto p-6  rounded-lg shadow-lg">
+      <div className="max-w-2xl mx-auto p-6 rounded-lg shadow-lg">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
             Have project in mind? Let's discuss
@@ -248,7 +286,7 @@ const ExploreOne = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={onSubmit} className="space-y-6">
           <div>
             <label className="block font-medium mb-2">
               Your Name

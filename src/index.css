@@ -121,8 +121,7 @@
   right: 20px;
   width: 40px;
   height: 40px;
-  background: linear-gradient(to right, #3b82f6, #8b5cf6); /* Example colors for indigo-500 to purple-600 */
- /* Yellowish color */
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -135,7 +134,6 @@
 
 .scroll-to-top:hover {
   transform: scale(1.1);
-  background-color: #c4a22a; /* Slightly darker yellow for hover */
 }
 
 .arrow-icon {
@@ -143,20 +141,30 @@
   color: white;
   font-weight: bold;
 }
-.contact{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #826afb;
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 35px; /* Slightly smaller for tablets */
+    height: 35px;
+    bottom: 25px; /* Adjust position */
+    right: 15px;
+  }
+
+  .arrow-icon {
+    font-size: 20px; /* Adjust arrow size for smaller screens */
+  }
 }
-form{
-max-width: 600px;
-width: 100%;
-background: #fff;
-padding: 25px 25px 30px;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-color: #333;
-margin: 25px;
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    width: 30px; /* Even smaller for mobile devices */
+    height: 30px;
+    bottom: 20px; /* Adjust position */
+    right: 10px;
+  }
+
+  .arrow-icon {
+    font-size: 18px; /* Adjust arrow size for small mobile screens */
+  }
 }
