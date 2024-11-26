@@ -17,7 +17,7 @@ import imgSrc4 from "../assets/roadmap/image-4.jpg";
 import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
 
-const ExploreOne = () => {
+const ExploreFour = () => {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -98,7 +98,7 @@ const ExploreOne = () => {
   ];
 
   return (
-    <Section className="overflow-hidden" id="exploremoreinterior">
+    <Section className="overflow-hidden" id="exploremoreresidential">
       <ScrollToTop />
       <div className="min-h-screen w-[90%] mx-auto">
         {/* Hero Section with Background Image */}
@@ -110,7 +110,7 @@ const ExploreOne = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40">
             <div className="container mx-auto px-6 h-full flex flex-col justify-center animate-slide-text items-center">
-              <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">Home Interior Design</h1>
+              <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">Residential Design</h1>
               <div className="flex items-center text-gray-200">
                 <Home size={16} className="mr-2" />
                 <Link to="/#home" className="hover:underline cursor-pointer">
@@ -168,11 +168,11 @@ const ExploreOne = () => {
         <h2 className="text-3xl font-bold mb-6">Our Capabilities</h2>
         <ul className="space-y-4">
           {[
-            "Custom Tailored Designs: Spaces that reflect your unique style.",
-            "Functional Layouts: Combining practicality with aesthetic appeal.",
-            "Premium Material Selection: High-quality finishes for lasting elegance.",
-            "Seamless Execution: Efficient and timely project delivery.",
-            "Modern & Timeless Themes: Designs that never go out of style."
+            "Custom Home Designs: Spaces tailored to your lifestyle and needs.",
+            "Balanced Aesthetics: A perfect blend of elegance and functionality.",
+            "Space Optimization: Maximizing every inch for practical living.",
+            "Premium Material Choices: Enhancing durability and visual appeal.",
+            "Timeless Interiors: Designs that remain stylish for years to come."
           ].map((text, index) => (
             <li key={index} className="flex items-center space-x-3">
               <span className="text-yellow-500">
@@ -189,8 +189,7 @@ const ExploreOne = () => {
       <div className="max-w-5xl mx-auto mb-20 px-4 text-center md:text-left md:ml-[80px]">
         <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
         <p className="text-lg leading-relaxed">
-          We believe in transforming your home into a sanctuary that reflects your unique style. Our designs combine modern aesthetics with timeless elegance, ensuring that every room is a perfect blend of functionality and beauty. From enhancing curb appeal with stylish exteriors to creating inviting and cozy interiors, we deliver exceptional designs that stand the test of time. Let us bring your vision to life and elevate your home to new heights.
-        </p>
+        We believe that residential design should be a harmonious mix of comfort, style, and practicality. Our process begins with understanding your vision and lifestyle, allowing us to craft personalized spaces that truly feel like home. From optimizing layouts to selecting high-quality finishes, we ensure every detail reflects your personality and preferences. Whether modern minimalism or classic charm, we deliver designs that stand the test of time while meeting the unique needs of your family.        </p>
       </div>
 
 
@@ -402,4 +401,4 @@ const ExploreOne = () => {
   );
 };
 
-export default ExploreOne;
+export default ExploreFour;

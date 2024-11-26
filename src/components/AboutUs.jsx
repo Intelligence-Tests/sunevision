@@ -17,7 +17,7 @@ import imgSrc4 from "../assets/roadmap/image-4.jpg";
 import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
 
-const ExploreOne = () => {
+const AboutUs = () => {
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -110,14 +110,14 @@ const ExploreOne = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40">
             <div className="container mx-auto px-6 h-full flex flex-col justify-center animate-slide-text items-center">
-              <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">Home Interior Design</h1>
+              <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">About Us</h1>
               <div className="flex items-center text-gray-200">
                 <Home size={16} className="mr-2" />
                 <Link to="/#home" className="hover:underline cursor-pointer">
                   Home
                 </Link> &nbsp;
                 <ChevronRight size={16} className="mx-2" />
-                <span>Service Details</span>
+                <span>About</span>
               </div>
             </div>
           </div>
@@ -402,4 +402,4 @@ const ExploreOne = () => {
   );
 };
 
-export default ExploreOne;
+export default AboutUs;

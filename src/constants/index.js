@@ -261,7 +261,8 @@ export const items = [
     backgroundUrl: card1,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-    route: "/exploremore"
+    light:true,
+    route: "/exploremoreinterior"
   },
   {
     id: "1",
@@ -280,6 +281,8 @@ export const items = [
     backgroundUrl: card3,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    light:true,
+    route:"/exploremore3ddesign"
   },
   {
     id: "3",
@@ -289,6 +292,7 @@ export const items = [
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
     light: true,
+    route:"/exploremoreresidential"
   },
   {
     id: "4",
@@ -297,6 +301,8 @@ export const items = [
     backgroundUrl: card5,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    light: true,
+    route:"/exploremorekitchen"
   },
   {
     id: "5",
@@ -305,6 +311,8 @@ export const items = [
     backgroundUrl: card6,
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    light: true,
+    route:"/exploremorecustom"
   },
 ];
 

@@ -14,6 +14,11 @@ import WorkingProcess from "./components/WorkingProcess";
 import ExploreOne from "./components/Explore1";
 import ExploreTwo from "./components/Explore2";
 import ScrollToTop from "./components/ScrollToTop";
+import ExploreThree from "./components/Explore3";
+import ExploreFour from "./components/Explore4";
+import ExploreFive from "./components/Explore5";
+import ExploreSix from "./components/Explore6";
+import AboutUs from "./components/AboutUs";
 
 const MainPage = () => (
   <>
@@ -38,8 +43,13 @@ const MainPage = () => (
 const App = () => (
   <Routes>
     <Route path="/" element={<MainPage />} /> {/* Main page route */}
-    <Route path="/exploremore" element={<ExploreOne />} /> {/* Explore page route */}
+    <Route path="/about" element={<AboutUs />} />
+    <Route path="/exploremoreinterior" element={<ExploreOne />} /> {/* Explore page route */}
     <Route path="/exploremoreexterior" element={<ExploreTwo />} />
+    <Route path="/exploremore3ddesign" element={<ExploreThree />} />
+    <Route path="/exploremoreresidential" element={<ExploreFour />} />
+    <Route path="/exploremorekitchen" element={<ExploreFive />} />
+    <Route path="/exploremorecustom" element={<ExploreSix />} />
   </Routes>
 );
 

@@ -7,8 +7,13 @@ import { socials } from "../constants";
 import React, { useEffect, useState } from "react";
 import ClipPath from "../assets/svg/ClipPath";
 import image2 from "../assets/benefits/image-2.jpg";
+import { Link } from "react-router-dom";
+import { items } from "../constants";
 
 const Collaboration = () => {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  }
   const [experience, setExperience] = useState(1); // Initial value for spinning effect
 
   useEffect(() => {
@@ -27,7 +32,7 @@ const Collaboration = () => {
       clearInterval(spinInterval);
       clearTimeout(stopTimeout);
     };
-  }, []); 
+  }, []);
   return (
     <Section className="overflow-hidden" id="aboutus">
       <div className="container lg:flex">
@@ -63,7 +68,13 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Learn More </Button>
+          <Link
+            to="/about"
+            onClick={handleClick}
+            className="ml-auto font-mono text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-2 rounded-lg shadow-lg hover:from-purple-600 hover:to-indigo-500 hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Learn More
+          </Link>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
@@ -92,7 +103,7 @@ const Collaboration = () => {
 
             {/* Image and Text */}
             <div className="flex-1 p-6 flex flex-col justify-center items-center text-center">
-            <img
+              <img
                 src={image2}
                 alt="Interior Design Sample"
                 className="w-full object-cover rounded-md"
