@@ -19,6 +19,7 @@ import ExploreFour from "./components/Explore4";
 import ExploreFive from "./components/Explore5";
 import ExploreSix from "./components/Explore6";
 import AboutUs from "./components/AboutUs";
+import ProjectOne from "./components/Project1";
 
 const MainPage = () => (
   <>
@@ -50,6 +51,8 @@ const App = () => (
     <Route path="/exploremoreresidential" element={<ExploreFour />} />
     <Route path="/exploremorekitchen" element={<ExploreFive />} />
     <Route path="/exploremorecustom" element={<ExploreSix />} />
+    <Route path="/project1" element={<ProjectOne />} />
+
   </Routes>
 );
 

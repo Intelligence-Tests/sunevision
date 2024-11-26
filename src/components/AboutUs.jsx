@@ -143,12 +143,13 @@ const AboutUs = () => {
                   Transform your living spaces into comfortable and stylish environments tailored to your unique tastes.Visualize your space before construction with detailed floor plans and realistic 3D renderings that bring your ideas to life.Create a home that reflects your personality, offering comfort, practicality, and timeless style.  Our commitment is to deliver high-quality, bespoke designs that align with your lifestyle and goals, making your space a true reflection of your vision.
                 </p>
                 <div className="mt-8">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
+                    onClick={() => document.getElementById("discoverservices").scrollIntoView({ behavior: "smooth" })}
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-purple-600 hover:to-indigo-500"
                   >
                     Discover More
-                  </a>
+                  </Link>
 
                 </div>
               </div>
@@ -199,7 +200,7 @@ const AboutUs = () => {
 
 
       {/* Section 2: Related Service */}
-      <div className="max-w-7xl mx-auto mt-16 container relative z-2">
+      <div id="discoverservices" className="max-w-7xl mx-auto mt-16 container relative z-2">
         <h2 className="text-3xl font-bold mb-8">Services We Provide</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           {items.map((item) => (
@@ -260,7 +261,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <Pricing/>
+      <Pricing />
       <WorkingProcess />
 
       {/*Contact form */}

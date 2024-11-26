@@ -61,7 +61,7 @@ export const navigation = [
   
   {
     id: "3",
-    title: "Blog",
+    title: "Projects",
     url: "#blog",
   },
   {
@@ -108,34 +108,38 @@ export const roadmap = [
     id: "0",
     title: "Newze Home Interior",
     text: "Create your dream space with our innovative and stylish home interior solutions.",
-    date: "May 2023",
+    date: "2023",
     status: "done",
     imageUrl: roadmap1,
     colorful: true,
+    route:"/project1"
   },
   {
     id: "1",
     title: "Full Home Decor",
     text: "Transform your space with our full home decor services.",
-    date: "May 2023",
+    date: "2023",
     status: "progress",
     imageUrl: roadmap2,
+    route:"/exploremoreexterior"
   },
   {
     id: "2",
     title: "Customization Plan",
     text: "Tailor your space to perfection with our flexible customization plans, designed to suit your unique style and needs.",
-    date: "May 2023",
+    date: "2023",
     status: "done",
     imageUrl: roadmap3,
+    route:"/about"
   },
   {
     id: "3",
     title: "2D/3D Designs",
     text: "Bring your ideas to life with our detailed 2D and 3D designs, offering a realistic preview of your project before it becomes a reality.",
-    date: "May 2023",
+    date: "2023",
     status: "progress",
     imageUrl: roadmap4,
+    route:"/exploremorecustom"
   },
 ];
 

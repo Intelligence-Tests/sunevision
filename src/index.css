@@ -168,3 +168,66 @@
     font-size: 18px; /* Adjust arrow size for small mobile screens */
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Main image container */
+.image-container {
+  position: relative;
+  width: 628px; /* Match the desired image size */
+  height: 426px; /* Match the desired image size */
+  overflow: hidden;
+}
+
+.image-click-animation {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.overlay-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  color: white;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay-subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6); /* Gradient colors */
+  -webkit-background-clip: text; /* Clips the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+  text-align: center; /* Optional: Center the text */
+}
+
+
+/* Hover effects */
+.image-container:hover .image-click-animation {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1; /* Show overlay */
+}
+

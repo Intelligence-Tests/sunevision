@@ -1,5 +1,6 @@
-import { notification1 } from "../assets";
+import { benefitIcon1, notification1 } from "../assets";
 import { notificationImages } from "../constants";
+import { items } from "../constants";
 
 const Notification = ({ className, title }) => {
   return (
@@ -9,7 +10,7 @@ const Notification = ({ className, title }) => {
       } flex items-center p-4 pr-6 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl gap-5`}
     >
       <img
-        src={notification1}
+        src={benefitIcon1}
         width={62}
         height={62}
         alt="image"
