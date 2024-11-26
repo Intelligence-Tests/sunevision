@@ -16,6 +16,8 @@ import imgSrc3 from "../assets/roadmap/image-3.jpg";
 import imgSrc4 from "../assets/roadmap/image-4.jpg";
 import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
+import Pricing from "./Pricing";
+import WorkingProcess from "./WorkingProcess";
 
 const AboutUs = () => {
   const Toast = Swal.mixin({
@@ -72,7 +74,7 @@ const AboutUs = () => {
     category: "",
     message: "",
   });
-  
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -122,107 +124,85 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+        <div className="">
+          <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+              <div>
+                <h2 className="text-3xl md:text-3xl font-extrabold mb-4 md:mb-8 leading-tight text-white font-grotesk sm:text-4xl">
+                  We Offer You
+                  <br />
+                  <span className="relative inline-block mt-2">
+                    <span className="relative z-10 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      Comprehensive Design Solutions for Every Space
+                    </span>
+                  </span>
+                </h2>
+                <p className="mt-3 text-lg text-gray-500">
+                  With over 2 years of experience, we specialize in crafting custom interior designs that blend style, comfort, and functionality.</p>
+                <p className="mt-6 text-base text-gray-500">
+                  Transform your living spaces into comfortable and stylish environments tailored to your unique tastes.Visualize your space before construction with detailed floor plans and realistic 3D renderings that bring your ideas to life.Create a home that reflects your personality, offering comfort, practicality, and timeless style.  Our commitment is to deliver high-quality, bespoke designs that align with your lifestyle and goals, making your space a true reflection of your vision.
+                </p>
+                <div className="mt-8">
+                  <a
+                    href="#"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-purple-600 hover:to-indigo-500"
+                  >
+                    Discover More
+                  </a>
 
-        {/* Main Content */}
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Featured Project Image */}
-            <div className="md:col-span-2">
-              <Slider {...settings}>
-                {images.map((image, index) => (
-                  <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-                    <img
-                      src={image}
-                      alt={`Slide ${index + 1}`}
-                      className="w-full h-[434px] object-cover"
-                    />
-                  </div>
-                ))}
-              </Slider>
-
-            </div>
-
-            {/* Services List */}
-            <div className="space-y-4">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-200 cursor-pointer "
-                >
-                  <div className="flex items-center justify-between ">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{service.name}</h3>
-                      <p className="text-sm text-gray-500">{service.description}</p>
-                    </div>
-                    {/* <ChevronRight className="text-gray-400" size={20} /> */}
-                  </div>
                 </div>
-              ))}
+              </div>
+              <div className="mt-12 lg:mt-0">
+                <div className="aspect-w-4 aspect-h-3 sm:aspect-w-3 sm:aspect-h-2">
+                  <img
+                    className="object-cover shadow-lg rounded-lg"
+                    src={service1}
+                    alt="Interior Design"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div className="flex flex-col min-h-screen">
+          <header className="bg-gray-900 text-white py-4 px-6">
+            <h1 className="text-2xl font-bold">Latest Designs</h1>
+          </header>
+          <main className="flex-1 py-8 px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className=" rounded-lg shadow-lg card">
+                <img src={service1} className="rounded-t-lg card-image" />
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold mb-4">Architecture Design</h2>
+                  <p>Explore our innovative architecture designs that blend form and function.</p>
+                </div>
+              </div>
+              <div className=" rounded-lg shadow-lg card">
+                <img src={service1} className="rounded-t-lg card-image" />
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold mb-4">Modern Building</h2>
+                  <p>Discover our cutting-edge modern building designs that redefine urban landscapes.</p>
+                </div>
+              </div>
+              <div className="rounded-lg shadow-lg card">
+                <img src={service1} className="rounded-t-lg card-image" />
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold mb-4">Bedroom Design Mastery</h2>
+                  <p>Let us help you transform your bedroom into a peaceful haven where comfort meets elegance.</p>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
 
-      {/* Section 1: Our Capabilities */}
-      <div className="max-w-5xl mx-auto mb-20 px-4 text-center md:text-left md:ml-[80px]">
-        <h2 className="text-3xl font-bold mb-6">Our Capabilities</h2>
-        <ul className="space-y-4">
-          {[
-            "Custom Tailored Designs: Spaces that reflect your unique style.",
-            "Functional Layouts: Combining practicality with aesthetic appeal.",
-            "Premium Material Selection: High-quality finishes for lasting elegance.",
-            "Seamless Execution: Efficient and timely project delivery.",
-            "Modern & Timeless Themes: Designs that never go out of style."
-          ].map((text, index) => (
-            <li key={index} className="flex items-center space-x-3">
-              <span className="text-yellow-500">
-                {/* Replace with an actual icon library or custom SVG */}
-                ✓
-              </span>
-              <span className="">{text}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
 
-      {/* Section 1: Our Approach */}
-      <div className="max-w-5xl mx-auto mb-20 px-4 text-center md:text-left md:ml-[80px]">
-        <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
-        <p className="text-lg leading-relaxed">
-          We believe in transforming your home into a sanctuary that reflects your unique style. Our designs combine modern aesthetics with timeless elegance, ensuring that every room is a perfect blend of functionality and beauty. From enhancing curb appeal with stylish exteriors to creating inviting and cozy interiors, we deliver exceptional designs that stand the test of time. Let us bring your vision to life and elevate your home to new heights.
-        </p>
-      </div>
-
-
-
-      {/* Section 1: Our Work Process */}
-      <div className="max-w-5xl mx-auto mb-20 px-4 text-center md:text-left md:ml-[80px]">
-        <h2 className="text-3xl font-bold mb-6">Our Work Process</h2>
-        <ul className="space-y-4">
-          {[
-            "Initial Consultation: We begin with a detailed discussion to understand your preferences, lifestyle, and vision for your home.",
-            "Personalized Design Concepts: Based on your input, we create custom design concepts that combine modern style with timeless elegance.",
-            "Design Refinement: We work with you to refine the designs, ensuring they align with your vision and functionality needs.",
-            "Material Selection: Our team assists in choosing the perfect materials, finishes, and furnishings to complement your design.",
-            "Execution & Project Management: We oversee every detail, managing the project from start to finish, ensuring the highest quality work and adherence to timelines.",
-            "Final Reveal: We complete the transformation with a final walkthrough to ensure everything is to your satisfaction, ready for you to enjoy."
-          ].map((text, index) => (
-            <li key={index} className="flex items-center space-x-3">
-              <span className="text-yellow-500">
-                {/* Replace with an actual icon library or custom SVG */}
-                ✓
-              </span>
-              <span className="">{text}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
 
       {/* Section 2: Related Service */}
       <div className="max-w-7xl mx-auto mt-16 container relative z-2">
-        <h2 className="text-3xl font-bold mb-8">Related Services</h2>
+        <h2 className="text-3xl font-bold mb-8">Services We Provide</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
-          {sampleSize(items, 3).map((item) => (
+          {items.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
@@ -249,9 +229,14 @@ const AboutUs = () => {
                   >
                     Explore more
                   </Link>
+
                 </div>
               </div>
+
+
+
               {item.light && <GradientLight />}
+
               <div
                 className="absolute inset-0.5 bg-n-8"
                 style={{ clipPath: "url(#benefits)" }}
@@ -268,15 +253,18 @@ const AboutUs = () => {
                   )}
                 </div>
               </div>
+
               <ClipPath />
             </div>
           ))}
         </div>
       </div>
 
+      <Pricing/>
+      <WorkingProcess />
 
       {/*Contact form */}
-      <div className="max-w-2xl mx-auto p-6 rounded-lg shadow-lg">
+      {/* <div className="max-w-2xl mx-auto p-6 rounded-lg shadow-lg">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
             Have project in mind? Let's discuss
@@ -395,7 +383,7 @@ const AboutUs = () => {
             Send Message
           </button>
         </form>
-      </div>
+      </div> */}
       <Footer />
     </Section>
 
