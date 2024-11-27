@@ -118,7 +118,7 @@
 .scroll-to-top {
   position: fixed;
   bottom: 35px;
-  right: 20px;
+  right: 1px;
   width: 40px;
   height: 40px;
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
@@ -137,7 +137,7 @@
 }
 
 .arrow-icon {
-  font-size: 24px; /* Adjust size of the arrow */
+  font-size: 20px; /* Adjust size of the arrow */
   color: white;
   font-weight: bold;
 }
@@ -243,4 +243,22 @@ html {
 .overlay-container:hover .overlay {
   opacity: 1; /* Show overlay */
 }
+/* Add this to your global CSS or in a styled component */
+@media (max-width: 600px) {
+    .whatsapp-icon {
+        right: 10px;  /* Align slightly towards the right */
+        bottom: 50px; /* Adjust vertical position */
+    }
+
+    .whatsapp-icon img {
+        width: 45px; /* Decrease size on smaller screens */
+        height: 45px;
+    }
+}
+
+.whatsapp-icon:hover img {
+    transform: scale(0.9); /* Slightly shrink the icon on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
 

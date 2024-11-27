@@ -18,6 +18,15 @@ import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
 
 const ProjectOne = () => {
+    const data = [
+        { label: 'Location', value: '7 Lake Street, London' },
+        { label: 'Client', value: 'wpOceans' },
+        { label: 'Architect', value: 'Harry Johnson' },
+        { label: 'Project Type', value: 'Interior' },
+        { label: 'Duration', value: '6 Months' },
+        { label: 'Completion', value: '15 Apr 2022' },
+        { label: 'Share', value: 'Architectural, Business' },
+    ];
     const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -90,7 +99,7 @@ const ProjectOne = () => {
         <Section className="overflow-hidden" id="project1">
             <ScrollToTop />
             <div className="min-h-screen w-[90%] mx-auto">
-                
+
                 {/* Hero Section with Background Image */}
                 <div className="relative h-64 bg-gray-900">
                     <img
@@ -113,29 +122,348 @@ const ProjectOne = () => {
                     </div>
                 </div>
 
+
+                <div className="max-w-6xl mx-auto p-6 mt-8">
+                    <div className="flex flex-col md:flex-row md:gap-8 lg:px-8 sm:px-6 px-4">
+                        {/* Left Section */}
+                        <div className="flex-1 md:pr-8">
+                            <h1 className="text-4xl font-bold mb-6">Interior Project</h1>
+                            <p className="text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere amet tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, placta condimentum cursus velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur amet risus bibendum. Posuere et eget orci, tempor enim.
+                            </p>
+                            <p className="text-gray-400 mt-4">
+                                Hac nibh fermentum nisi, placta condimentum cursus velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur amet risus bibendum. Posuere et eget orci, sed velit dictum quam. Id risus pharetra est.
+                            </p>
+                        </div>
+
+                        {/* Right Section */}
+                        <div className="flex-shrink-0 md:w-[30%] bg-gray-900 p-6 rounded-lg shadow-lg mt-8 md:mt-0">
+                            <div className="space-y-5">
+                                {/* Location */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Location:</p>
+                                    <p className="w-[60%] md:w-[80%]">7 Lake Street, London</p>
+                                </div>
+                                {/* Client */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Client:</p>
+                                    <p className="w-[60%] md:w-[80%]">wpOceans</p>
+                                </div>
+                                {/* Architect */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Architect:</p>
+                                    <p className="w-[60%] md:w-[80%]">Harry Johnson</p>
+                                </div>
+                                {/* Project Type */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Project:</p>
+                                    <p className="w-[60%] md:w-[80%]">Interior</p>
+                                </div>
+                                {/* Duration */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Duration:</p>
+                                    <p className="w-[60%] md:w-[80%]">6 Months</p>
+                                </div>
+                                {/* Completion */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Completion:</p>
+                                    <p className="w-[60%] md:w-[80%]">15 Apr 2022</p>
+                                </div>
+                                {/* Share */}
+                                <div className="flex justify-between">
+                                    <p className="font-bold w-[40%] md:w-[50%]">Share:</p>
+                                    <p className="w-[60%] md:w-[80%]">Architectural, Business</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 {/* Main Content */}
                 <div className="container mx-auto px-6 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="w-[100%] ">
                         {/* Featured Project Image */}
-                        <div className="md:col-span-2">
+                        <div className="md:col-span-2 rounded-lg overflow-hidden shadow-lg">
                             <Slider {...settings}>
                                 {images.map((image, index) => (
-                                    <div key={index} className="rounded-lg overflow-hidden shadow-lg">
+                                    <div key={index} className="">
                                         <img
                                             src={image}
                                             alt={`Slide ${index + 1}`}
-                                            className="w-full h-[434px] object-cover"
+                                            className="w-[90%] h-[434px] object-cover mx-auto"
                                         />
                                     </div>
                                 ))}
                             </Slider>
-
                         </div>
+                    </div>
+                </div>
 
+            </div>
+
+            {/*Our Startegies */}
+            <div className="py-15">
+                <div className="max-w-[82%] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div>
+                            <h2 className="text-3xl font-extrabold">Our Strategies</h2>
+                            <ul className="mt-8 space-y-4">
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Non sed velit dictum quam risus pharetra esta.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Hac nibh fermentum nisi, placta condimentum cursus.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Massa volutpat odio facilisis purus sit elementum.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-green-500 font-bold">
+                                        Elit curabitur amet risus bibendum.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="mt-12 lg:mt-0 bg-[#d1b093] p-8 rounded-lg shadow-lg">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                                "Amazing looking theme and instantly turns your application into a great looking one. Really shows that pro_fessionals built this theme up. Very happy with the way the theme looks ."
+                            </h3>
+                            <p className="text-gray-900 text-lg">
+                                Robert - Yellow Theme
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div className="py-15">
+                <div className="max-w-[82%] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div>
+                            <h2 className="text-3xl font-extrabold">Our approach</h2>
+                            <p className="mt-6 text-base text-gray-400">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse deanean tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce vulputate diam interdum morbi ac a.
+                            </p>
+                        </div>
+                        <div className="mt-12 lg:mt-0">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                                <div className="rounded-lg overflow-hidden">
+                                    <img
+                                        src={service1}
+                                        alt="Interior living room"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <div className="rounded-lg overflow-hidden">
+                                    <img
+                                        src={service1}
+                                        alt="Exterior modern home"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="py-15">
+                <div className="max-w-[82%] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div>
+                            <h2 className="text-3xl font-extrabold">Received goals</h2>
+                            <ul className="mt-8 space-y-4">
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Non sed velit dictum quam risus pharetra esta.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Hac nibh fermentum nisi, placta condimentum cursus.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Massa volutpat odio facilisis purus sit elementum.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 className="text-3xl font-extrabold">Results</h2>
+                            <ul className="mt-8 space-y-4">
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Mauris dignissim blandit cursus imperdiet accumsan lorem.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Nam id in non sed cras purus nunc et.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Mauris orci, cursus nisl odio est adipiscing gravida magna eget.
+                                    </p>
+                                </li>
+                                <li className="flex items-start">
+                                    <div className="flex-shrink-0">
+                                        <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <p className="ml-3 text-base text-gray-400">
+                                        Quis mauris vel felis convallis nulla dignissim.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="discoverservices" className="max-w-[85%] max-w-7xl mx-auto mt-16 container relative z-2">
+                <h2 className="text-3xl font-bold mb-8">Services We Provide</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+                    {items.map((item) => (
+                        <div
+                            className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+                            style={{
+                                backgroundImage: `url(${item.backgroundUrl})`,
+                                zIndex: 1,
+                            }}
+                            key={item.id}
+                        >
+                            <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
+                                <h5 className="h5 mb-5">{item.title}</h5>
+                                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                                <div className="flex items-center mt-auto">
+                                    <img
+                                        src={item.iconUrl}
+                                        width={48}
+                                        height={48}
+                                        alt={item.title}
+                                        className="rounded-lg"
+                                    />
+                                    <Link
+                                        to={item.route}
+                                        onClick={handleClick}
+                                        className="ml-auto font-mono text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-2 rounded-lg shadow-lg hover:from-purple-600 hover:to-indigo-500 hover:scale-105 transition duration-300 ease-in-out"
+                                    >
+                                        Explore more
+                                    </Link>
+
+                                </div>
+                            </div>
+
+
+
+                            {item.light && <GradientLight />}
+
+                            <div
+                                className="absolute inset-0.5 bg-n-8"
+                                style={{ clipPath: "url(#benefits)" }}
+                            >
+                                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                                    {item.imageUrl && (
+                                        <img
+                                            src={item.imageUrl}
+                                            width={380}
+                                            height={362}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
+                                </div>
+                            </div>
+
+                            <ClipPath />
+                        </div>
+                    ))}
+                </div>
+            </div>
 
             {/*Contact form */}
             <div className="max-w-2xl mx-auto p-6 rounded-lg shadow-lg">

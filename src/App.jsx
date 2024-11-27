@@ -20,12 +20,14 @@ import ExploreFive from "./components/Explore5";
 import ExploreSix from "./components/Explore6";
 import AboutUs from "./components/AboutUs";
 import ProjectOne from "./components/Project1";
+import WhatsappFeature from "./components/WhatsappFeature";
 
 const MainPage = () => (
   <>
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
       <Header />
-      <ScrollToTop/>
+      <ScrollToTop />
+      <WhatsappFeature/>
       <Hero />
       <Benefits />
       <Collaboration />
@@ -52,7 +54,6 @@ const App = () => (
     <Route path="/exploremorekitchen" element={<ExploreFive />} />
     <Route path="/exploremorecustom" element={<ExploreSix />} />
     <Route path="/project1" element={<ProjectOne />} />
-
   </Routes>
 );
 
