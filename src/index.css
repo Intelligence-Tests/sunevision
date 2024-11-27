@@ -191,19 +191,20 @@ html {
 }
 
 .overlay {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.4); /* Optional: Semi-transparent background */
   color: white;
-  opacity: 0; /* Hidden by default */
+  text-align: center; /* Ensure text is aligned centrally */
   transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
 }
 
 .overlay-title {
@@ -213,13 +214,25 @@ html {
 }
 
 .overlay-subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Default font size for small screens */
   margin: 0.5rem 0 0;
   background: linear-gradient(to right, #3b82f6, #8b5cf6); /* Gradient colors */
   -webkit-background-clip: text; /* Clips the gradient to the text */
   -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
-  text-align: center; /* Optional: Center the text */
+  text-align: center; /* Centers the text */
+  font-weight: 600; /* Slightly bold for better readability */
+  line-height: 1.5; /* Improves line height for better spacing */
+
+  /* Larger screen adjustments */
+  @media (min-width: 768px) {
+    font-size: 1.2rem; /* Adjust font size for tablets and larger */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 1.4rem; /* Further increase font size for desktops */
+  }
 }
+
 
 
 /* Hover effects */

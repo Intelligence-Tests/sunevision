@@ -13,7 +13,7 @@ const Roadmap = () => (
     <div className="container md:pb-10">
       <Heading tag="Latest Projects" title="Our Latest Projects and Designs" />
 
-      <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
+      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
           const status = item.status === "done" ? "Done" : "In progress";
           const handleClick = () => {
@@ -50,23 +50,22 @@ const Roadmap = () => (
                       <div className="tagline">{status}</div> */}
                     {/* </div> */}
                   </div>
-                  <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
+                  <h4 className="h4 text-lg sm:text-xl md:text-2xl mb-2">{item.title}</h4>
+                  <p className="body-2 text-n-4 text-sm sm:text-base">{item.text}</p>
                   <div className="image-container mb-10 -my-10 -mx-15 mt-10">
                     <Link to={item.route} onClick={handleClick}>
                       <div className="overlay-container">
                         <img
-                          className="image-click-animation"
+                          className="image-click-animation mx-auto w-full max-w-[90%] md:max-w-[628px]"
                           src={item.imageUrl}
-                          width={628}
-                          height={426}
                           alt={item.title}
                         />
                         <div className="overlay">
                           <h3 className="overlay-title"></h3>
-                          <p className="overlay-subtitle">Explore Project</p>
+                          <p className="overlay-subtitle text-sm md:text-lg">Explore Project</p>
                         </div>
                       </div>
+
                     </Link>
 
                   </div>
