@@ -8,6 +8,9 @@ import { Gradient } from "./design/Roadmap";
 import ClipPath from "../assets/svg/ClipPath";
 import { Link } from "react-router-dom";
 
+const handleClick = () => {
+  window.scrollTo(0, 0);
+}
 const Roadmap = () => (
   <Section className="overflow-hidden" id="blog">
     <div className="container md:pb-10">
@@ -16,9 +19,7 @@ const Roadmap = () => (
       <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
           const status = item.status === "done" ? "Done" : "In progress";
-          const handleClick = () => {
-            window.scrollTo(0, 0);
-          }
+
           return (
             <div
               className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-6"
@@ -35,8 +36,9 @@ const Roadmap = () => (
                     alt="Grid"
                   /> */}
                 </div>
-                <div className="relative z-1">
-                  <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
+                <div className="relative z-1 ">
+                  <Gradient/>
+                  <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20 ">
                     {/* <Tagline>{item.date}</Tagline>
 
                     <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
@@ -53,23 +55,25 @@ const Roadmap = () => (
                   <h4 className="h4 text-lg sm:text-xl md:text-2xl mb-2">{item.title}</h4>
                   <p className="body-2 text-n-4 text-sm sm:text-base">{item.text}</p>
                   <div className="image-container mb-10 -my-10 -mx-15 mt-10">
-                    <Link to={item.route} onClick={handleClick}>
+                    <Link to={item.route}
+                      onClick={handleClick}
+                    >
                       <div className="overlay-container">
                         <img
-                          className="image-click-animation mx-auto w-full max-w-[90%] md:max-w-[628px]"
+                          className="image-click-animation"
                           src={item.imageUrl}
                           alt={item.title}
                         />
                         <div className="overlay">
-                          <h3 className="overlay-title"></h3>
-                          <p className="overlay-subtitle text-sm md:text-lg">Explore Project</p>
+                          {/* <h3 className="overlay-title"></h3>
+                          <p className="overlay-subtitle text-sm md:text-lg">Explore Project</p> */}
                         </div>
                       </div>
 
                     </Link>
 
                   </div>
-                  <Gradient />
+
 
                 </div>
               </div>
