@@ -222,13 +222,13 @@ const WorkingProcess = () => {
                     {
                       icon: <MapPin className="h-5 w-5 md:h-6 md:w-6" />,
                       title: "Visit Us",
-                      details: ["Basaveshwarnagar", "Bangalore, Karnataka"],
+                      details: ["#727,Shree ranga Nilaya,3rd cross road,6th main road R.H.S.C Layout,D-group main road,Annapoorneshwarinagar,Nagarbhavi", "Bangalore, Karnataka"],
                       gradient: "from-blue-500 to-blue-600"
                     },
                     {
                       icon: <Phone className="h-5 w-5 md:h-6 md:w-6" />,
                       title: "Call Us",
-                      details: ["+91 1234567890", "Mon-Fri 9AM-6PM"],
+                      details: ["+91 7019918890", "Mon-Fri 9AM-6PM"],
                       gradient: "from-purple-500 to-purple-600"
                     },
                     {

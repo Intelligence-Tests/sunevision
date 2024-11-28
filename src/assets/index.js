@@ -65,7 +65,7 @@ import benefitCard4 from "./benefits/card-4.png";
 import benefitCard5 from "./benefits/card-5.png";
 import benefitCard6 from "./benefits/card-6.png";
 import benefitIcon1 from "./benefits/icon-1.jpg";
-import benefitIcon2 from "./benefits/icon-2.svg";
+import benefitIcon2 from "./benefits/icon-2.png";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
 import benefitImage2 from "./benefits/image-2.jpg";

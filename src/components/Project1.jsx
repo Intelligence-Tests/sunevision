@@ -18,14 +18,14 @@ import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
 
 const ProjectOne = () => {
-    const data = [
-        { label: 'Location', value: '7 Lake Street, London' },
-        { label: 'Client', value: 'wpOceans' },
-        { label: 'Architect', value: 'Harry Johnson' },
-        { label: 'Project Type', value: 'Interior' },
-        { label: 'Duration', value: '6 Months' },
-        { label: 'Completion', value: '15 Apr 2022' },
-        { label: 'Share', value: 'Architectural, Business' },
+    const projectDetails = [
+        { label: 'Location', value: 'Basaveshwarnagar,Bengaluru' },
+        { label: 'Client', value: 'Shashidar' },
+        { label: 'Architect', value: 'Sun E-Vision Arch Team' },
+        { label: 'Project', value: 'Interior' },
+        { label: 'Duration', value: '4 Months' },
+        { label: 'Completion', value: '15 Apr 2023' },
+        { label: 'Share', value: 'Architectural, Business' }
     ];
     const Toast = Swal.mixin({
         toast: true,
@@ -129,51 +129,30 @@ const ProjectOne = () => {
                         <div className="flex-1 md:pr-8">
                             <h1 className="text-4xl font-bold mb-6">Interior Project</h1>
                             <p className="text-gray-400">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Metus dis posuere amet tincidunt commodo, velit. Ipsum, hac nibh fermentum nisi, placta condimentum cursus velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur amet risus bibendum. Posuere et eget orci, tempor enim.
+                                At Sun E-Vision Arch we specialize in creating spaces that merge functionality with aesthetics, reflecting the unique personality and needs of our clients. Our interior design projects are tailored to bring together comfort, style, and innovation, ensuring each space becomes a true extension of those who inhabit it.We are committed to combining modern design techniques with timeless elements to deliver a truly bespoke experience.
+
                             </p>
                             <p className="text-gray-400 mt-4">
-                                Hac nibh fermentum nisi, placta condimentum cursus velit dui. Massa volutpat odio facilisis purus sit elementum. Non, sed velit dictum quam. Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt. Id aliquet duis sollicitudin diam, elit sit. Et nisi in libero facilisis sed est. Elit curabitur amet risus bibendum. Posuere et eget orci, sed velit dictum quam. Id risus pharetra est.
-                            </p>
+                                From concept to completion, our focus remains on delivering personalized designs that seamlessly blend luxury, utility, and sustainability. Whether it's a cozy home or a dynamic office, we strive to exceed expectations, transforming ordinary spaces into extraordinary experiences.
+
+                                Let us bring your vision to life with creativity, precision, and passion.We pay attention to every detail, ensuring that each element aligns perfectly with the overall vision                            </p>
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex-shrink-0 md:w-[30%] bg-gray-900 p-6 rounded-lg shadow-lg mt-8 md:mt-0">
-                            <div className="space-y-5">
-                                {/* Location */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Location:</p>
-                                    <p className="w-[60%] md:w-[80%]">7 Lake Street, London</p>
-                                </div>
-                                {/* Client */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Client:</p>
-                                    <p className="w-[60%] md:w-[80%]">wpOceans</p>
-                                </div>
-                                {/* Architect */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Architect:</p>
-                                    <p className="w-[60%] md:w-[80%]">Harry Johnson</p>
-                                </div>
-                                {/* Project Type */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Project:</p>
-                                    <p className="w-[60%] md:w-[80%]">Interior</p>
-                                </div>
-                                {/* Duration */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Duration:</p>
-                                    <p className="w-[60%] md:w-[80%]">6 Months</p>
-                                </div>
-                                {/* Completion */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Completion:</p>
-                                    <p className="w-[60%] md:w-[80%]">15 Apr 2022</p>
-                                </div>
-                                {/* Share */}
-                                <div className="flex justify-between">
-                                    <p className="font-bold w-[40%] md:w-[50%]">Share:</p>
-                                    <p className="w-[60%] md:w-[80%]">Architectural, Business</p>
-                                </div>
+                        <div className="bg-gray-900 rounded-xl shadow-lg p-6 w-full max-w-md mx-auto">
+                            <h2 className="text-xl font-bold text-white mb-4 border-b border-gray-700 pb-2">
+                                Project Details
+                            </h2>
+                            <div className="space-y-4">
+                                {projectDetails.map((detail, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex justify-between items-center pb-2 border-b border-gray-700 last:border-b-0"
+                                    >
+                                        <span className="text-gray-300 font-medium w-1/3">{detail.label}:</span>
+                                        <span className="text-white text-right w-2/3">{detail.value}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -217,7 +196,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Non sed velit dictum quam risus pharetra esta.
+                                        Designs tailored to reflect our client's personality and vision.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -227,7 +206,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.
+                                        We optimize every space with creative layouts and thoughtful planning.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -237,7 +216,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Hac nibh fermentum nisi, placta condimentum cursus.
+                                        Combining aesthetics and functionality to craft timeless interiors.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -247,7 +226,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Massa volutpat odio facilisis purus sit elementum.
+                                        Using premium materials and finishes for a luxurious touch.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -257,17 +236,16 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-green-500 font-bold">
-                                        Elit curabitur amet risus bibendum.
+                                        Collaborating closely to ensure every detail is aligned with your needs.
                                     </p>
                                 </li>
                             </ul>
                         </div>
                         <div className="mt-12 lg:mt-0 bg-[#d1b093] p-8 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                                "Amazing looking theme and instantly turns your application into a great looking one. Really shows that pro_fessionals built this theme up. Very happy with the way the theme looks ."
-                            </h3>
+                                "Exceptional design and attention to detail! The team transformed our space into something truly stunning, balancing elegance and functionality perfectly. Their professionalism and creativity exceeded our expectations. Highly recommend them for anyone looking to bring their vision to life!"                            </h3>
                             <p className="text-gray-900 text-lg">
-                                Robert - Yellow Theme
+                                - Shasidar
                             </p>
                         </div>
                     </div>
@@ -280,8 +258,13 @@ const ProjectOne = () => {
                         <div>
                             <h2 className="text-3xl font-extrabold">Our approach</h2>
                             <p className="mt-6 text-base text-gray-400">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat suspendisse deanean tellus augue morbi risus. Sit morbi vitae morbi sed urna sed purus. Orci facilisi eros sed pellentesque. Risus id sed tortor sed scelerisque. Vestibulum elit elementum, magna id viverra non, velit. Pretium, eros, porttitor fusce auctor vitae id. Phasellus scelerisque nibh eleifend vel enim mauris purus. Rutrum vel sem adipiscing nisi vulputate molestie scelerisque molestie ultrices. Eu, fusce vulputate diam interdum morbi ac a.
-                            </p>
+                                We believe in creating personalized spaces that seamlessly blend functionality and aesthetics.
+
+                                Every project begins with a deep understanding of our client’s needs and aspirations.
+
+                                Our team uses a collaborative process to ensure every design element aligns with the overall vision.
+
+                                Attention to detail and premium craftsmanship are at the heart of everything we do.                            </p>
                         </div>
                         <div className="mt-12 lg:mt-0">
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -319,7 +302,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Non sed velit dictum quam risus pharetra esta.
+                                       Transform spaces into functional and aesthetically pleasing environments.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -329,7 +312,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Id risus pharetra est, at rhoncus, nec ullamcorper tincidunt.
+                                        Ensure every design reflects the unique personality and vision of the client.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -339,7 +322,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Hac nibh fermentum nisi, placta condimentum cursus.
+                                        Deliver innovative solutions that balance creativity with practicality.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -349,7 +332,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Massa volutpat odio facilisis purus sit elementum.
+                                       Maintain high standards of quality and attention to detail in every project.
                                     </p>
                                 </li>
                             </ul>
@@ -364,7 +347,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Mauris dignissim blandit cursus imperdiet accumsan lorem.
+                                        Delivered elegant and functional spaces that exceed client expectations.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -374,7 +357,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Nam id in non sed cras purus nunc et.
+                                       Enhanced the usability and aesthetics of each project with innovative designs.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -384,7 +367,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Mauris orci, cursus nisl odio est adipiscing gravida magna eget.
+                                       Achieved seamless integration of style and practicality, creating timeless interiors.
                                     </p>
                                 </li>
                                 <li className="flex items-start">
@@ -394,7 +377,7 @@ const ProjectOne = () => {
                                         </svg>
                                     </div>
                                     <p className="ml-3 text-base text-gray-400">
-                                        Quis mauris vel felis convallis nulla dignissim.
+                                        Earned client satisfaction through attention to detail and superior craftsmanship.
                                     </p>
                                 </li>
                             </ul>

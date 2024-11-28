@@ -121,26 +121,25 @@ export const roadmap = [
     date: "2023",
     status: "progress",
     imageUrl: roadmap2,
-    route:"/exploremoreexterior"
   },
-  {
-    id: "2",
-    title: "Customization Plan",
-    text: "Tailor your space to perfection with our flexible customization plans, designed to suit your unique style and needs.",
-    date: "2023",
-    status: "done",
-    imageUrl: roadmap3,
-    route:"/about"
-  },
-  {
-    id: "3",
-    title: "2D/3D Designs",
-    text: "Bring your ideas to life with our detailed 2D and 3D designs, offering a realistic preview of your project before it becomes a reality.",
-    date: "2023",
-    status: "progress",
-    imageUrl: roadmap4,
-    route:"/exploremorecustom"
-  },
+  // {
+  //   id: "2",
+  //   title: "Customization Plan",
+  //   text: "Tailor your space to perfection with our flexible customization plans, designed to suit your unique style and needs.",
+  //   date: "2023",
+  //   status: "done",
+  //   imageUrl: roadmap3,
+  //   route:"/about"
+  // },
+  // {
+  //   id: "3",
+  //   title: "2D/3D Designs",
+  //   text: "Bring your ideas to life with our detailed 2D and 3D designs, offering a realistic preview of your project before it becomes a reality.",
+  //   date: "2023",
+  //   status: "progress",
+  //   imageUrl: roadmap4,
+  //   route:"/exploremorecustom"
+  // },
 ];
 
 export const collabText =
