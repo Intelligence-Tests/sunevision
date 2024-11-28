@@ -108,10 +108,17 @@ const Roadmap = () => {
 
   // Improved scroll handling function
   const handleClick = (route) => {
-    // Scroll to top of the page
+    // Option 1: Window scroll method
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // Optional: adds smooth scrolling
+      behavior: 'smooth'
+    });
+
+    // Option 2: More robust scroll method
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
     });
 
     // Navigate to the specified route
