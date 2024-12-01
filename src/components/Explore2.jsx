@@ -10,12 +10,13 @@ import sampleSize from "lodash/sampleSize";
 import Footer from "./Footer";
 import { brainwave } from "../assets";
 import Slider from "react-slick";
-import imgSrc1 from "../assets/roadmap/image-1.jpg";
-import imgSrc2 from "../assets/roadmap/image-2.jpg";
+import imgSrc1 from "../assets/photos/exterior/exteriorphoto1.jpeg";
+import imgSrc2 from "../assets/photos/exterior/exteriorphoto2.jpeg";
 import imgSrc3 from "../assets/roadmap/image-3.jpg";
-import imgSrc4 from "../assets/roadmap/image-4.jpg";
+import imgSrc4 from "../assets/photos/exterior/exteriorphoto3.jpeg";
 import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
+import WhatsappFeature from "./WhatsappFeature";
 
 const ExploreTwo = () => {
   const Toast = Swal.mixin({
@@ -33,7 +34,7 @@ const ExploreTwo = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "261c296e-a139-470e-b16e-39511476da4d");
+    formData.append("access_key", "d237528a-98e8-4684-95b1-a63bf6e3c9da");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -100,6 +101,7 @@ const ExploreTwo = () => {
   return (
     <Section className="overflow-hidden" id="exploremoreexterior">
       <ScrollToTop />
+      <WhatsappFeature/>
       <div className="min-h-screen w-[90%] mx-auto">
         {/* Hero Section with Background Image */}
         <div className="relative h-64 bg-gray-900">

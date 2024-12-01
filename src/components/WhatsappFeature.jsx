@@ -3,8 +3,8 @@ import whatsapp from "../assets/whatsappicon.jpg";
 
 const WhatsappFeature = () => {
     const openWhatsApp = () => {
-        const phoneNumber = "9164866182"; // Replace with the recipient's phone number
-        const message = "Hello Sun E-Vision-Arch team, I want to know more about your design plans and services";
+        const phoneNumber = "7019918890"; // Replace with the recipient's phone number
+        const message = "Hi! I want to know more about 'Sun E-Vision Arch' design plans and services.";
         const whatsappURL = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
         window.open(whatsappURL, "_blank");
     };

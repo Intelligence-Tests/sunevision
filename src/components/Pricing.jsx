@@ -2,7 +2,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 
 // Import images directly
-import prakyathPhoto from "../assets/ceophotos/prakyathphoto.jpg";
+import prakyathPhoto from "../assets/ceophotos/prakyathphoto.jpeg";
 import sanjanPhoto from "../assets/ceophotos/photoss.jpeg";
 import azeemPhoto from "../assets/ceophotos/sphoto.jpeg";
 

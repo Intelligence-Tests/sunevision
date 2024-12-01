@@ -11,13 +11,14 @@ import Footer from "./Footer";
 import { brainwave } from "../assets";
 import Slider from "react-slick";
 import imgSrc1 from "../assets/roadmap/image-1.jpg";
-import imgSrc2 from "../assets/roadmap/image-2.jpg";
-import imgSrc3 from "../assets/roadmap/image-3.jpg";
-import imgSrc4 from "../assets/roadmap/image-4.jpg";
+import imgSrc2 from "../assets/photos/aboutus/architecturedesign.jpeg";
+import imgSrc3 from "../assets/photos/aboutus/bedroommastery.jpeg";
+import imgSrc4 from "../assets/photos/aboutus/modernbuilding.jpeg";
 import ScrollToTop from "./ScrollToTop";
 import Swal from 'sweetalert2'
 import Pricing from "./Pricing";
 import WorkingProcess from "./WorkingProcess";
+import WhatsappFeature from "./WhatsappFeature";
 
 const AboutUs = () => {
   const Toast = Swal.mixin({
@@ -35,7 +36,8 @@ const AboutUs = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "261c296e-a139-470e-b16e-39511476da4d");
+    formData.append("access_key", "d237528a-98e8-4684-95b1-a63bf6e3c9da");
+    
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -102,6 +104,7 @@ const AboutUs = () => {
   return (
     <Section className="overflow-hidden" id="exploremoreinterior">
       <ScrollToTop />
+      <WhatsappFeature/>
       <div className="min-h-screen w-[90%] mx-auto">
         {/* Hero Section with Background Image */}
         <div className="relative h-64 bg-gray-900">
@@ -172,21 +175,21 @@ const AboutUs = () => {
           <main className="flex-1 py-8 px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className=" rounded-lg shadow-lg card">
-                <img src={service1} className="rounded-t-lg card-image" />
+                <img src={imgSrc2} className="rounded-t-lg card-image" />
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-4">Architecture Design</h2>
                   <p>Explore our innovative architecture designs that blend form and function.</p>
                 </div>
               </div>
               <div className=" rounded-lg shadow-lg card">
-                <img src={service1} className="rounded-t-lg card-image" />
+                <img src={imgSrc4} className="rounded-t-lg card-image" style={{ height: "365px", width: "100%", objectFit: "cover" }}/>
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-4">Modern Building</h2>
                   <p>Discover our cutting-edge modern building designs that redefine urban landscapes.</p>
                 </div>
               </div>
               <div className="rounded-lg shadow-lg card">
-                <img src={service1} className="rounded-t-lg card-image" />
+                <img src={imgSrc3} className="rounded-t-lg card-image" />
                 <div className="p-6">
                   <h2 className="text-2xl font-bold mb-4">Bedroom Design Mastery</h2>
                   <p>Let us help you transform your bedroom into a peaceful haven where comfort meets elegance.</p>
